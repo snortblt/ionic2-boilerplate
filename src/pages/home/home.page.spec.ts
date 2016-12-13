@@ -14,6 +14,10 @@ describe('Home Page:', () => {
         ],
     }));
 
+	it('navCtrl methods should be defined', inject([HomePage], (home: HomePage) => {
+		expect(home.navCtrl.canGoBack).toBeDefined();
+    }));
+
     it('Barney should be the user', inject([HomePage], (home: HomePage) => {
         expect(home.user).toEqual({
             name: 'barney',
